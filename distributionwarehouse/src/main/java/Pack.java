@@ -12,14 +12,22 @@ public class Pack {
     }
 
     public Pack(int capacity) {
-        this.capacity = capacity;
+        if (capacity >= 100 && capacity <= 500) {
+            this.capacity = capacity;
+        } else {
+            throw new IllegalArgumentException(" Pack Capacity requirements not met.");
+        }
+    }
+
+    public void add(Product product) {
+        productsInPack.add(product);
     }
 
     public Price calculatePriceInAPack() {
         Price result = new Price(0);
 
         for (Product product : productsInPack) {
-            result.setValue(result.getValue() + product.getUnitPrice().getValue());
+            result.setValue(result.getValue() + product.getUnitPrice().getValue() * this.capacity);
         }
         return result;
     }
@@ -38,6 +46,13 @@ public class Pack {
 
     public void setProductsInPack(List<Product> productsInPack) {
         this.productsInPack = productsInPack;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder resultString = new StringBuilder();
+        resultString.append(productsInPack).append("");
+        return resultString.toString();
     }
 }
 

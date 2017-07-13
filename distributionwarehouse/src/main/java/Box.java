@@ -12,7 +12,11 @@ public class Box {
     }
 
     public Box(int capacity) {
-        this.capacity = capacity;
+        if (capacity >= 30 && capacity <= 60) {
+            this.capacity = capacity;
+        } else {
+            throw new IllegalArgumentException(" Box Capacity requirements not met.");
+        }
     }
 
     public void add(Product product) {
@@ -23,7 +27,7 @@ public class Box {
         Price result = new Price(0);
 
         for (Product product : productsInBox) {
-            result.setValue(result.getValue() + product.getUnitPrice().getValue());
+            result.setValue(result.getValue() + product.getUnitPrice().getValue() * this.capacity);
         }
         return result;
     }
@@ -46,7 +50,9 @@ public class Box {
 
     @Override
     public String toString() {
-        return "Box{" + "capacity=" + capacity + ", productsInBox=" + productsInBox + '}';
+        StringBuilder resultString = new StringBuilder();
+        resultString.append(productsInBox).append("");
+        return resultString.toString();
     }
 }
 

@@ -96,6 +96,19 @@ public class Fruit implements Category {
 
     @Override
     public String toString() {
-        return  "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\nbags=" + bags + '}' + "\nboxes=" + boxes;
+        return "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\n\t" + bags + ", Total "
+                + calculateTotalBagsWeight() + " kg," + " Total Price: " + calculateTotalBagsPrice() + "\n\t" + boxes + ", Total "
+                + calculateTotalBoxesWeight() + " kg," + " Total Price: " + calculateTotalBoxesPrice() + "\n\t" + packs + ", Total "
+                + calculateTotalPacksWeight() + " kg," + " Total Price: " + calculateTotalPacksPrice();
+    }
+
+    public String toStringOptionTwo() {
+        StringBuilder result = new StringBuilder();
+
+        for (Bag bag : bags) {
+            result.append(bag);
+        }
+
+        return result.toString();
     }
 }

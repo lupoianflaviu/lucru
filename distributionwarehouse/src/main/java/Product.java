@@ -1,3 +1,6 @@
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 /**
  * Created by flaviu.lupoian on 13/07/2017.
  */
@@ -6,6 +9,8 @@ public class Product {
     private Price unitPrice;
     private int nutritionalQuality;
     private Producer producer;
+    private int totalWeightPerProducer;
+    private Set<Producer> producerSet = new LinkedHashSet<>();
 
     public Product() {
     }
@@ -13,8 +18,13 @@ public class Product {
     public Product(String name, Price unitPrice, int nutritionalQuality, Producer producer) {
         this.name = name;
         this.unitPrice = unitPrice;
-        this.nutritionalQuality = nutritionalQuality;
         this.producer = producer;
+        if (nutritionalQuality >= 50 && nutritionalQuality <= 600) {
+            this.nutritionalQuality = nutritionalQuality;
+        } else {
+            throw new IllegalArgumentException("Nutritional Quality requirements not met.");
+        }
+        producerSet.add(this.producer);
     }
 
     public String getName() {
@@ -51,7 +61,16 @@ public class Product {
 
     @Override
     public String toString() {
-        return name + '\'' + ", unitPrice=" + unitPrice + ", nutritionalQuality=" + nutritionalQuality + ", producer=" + producer
-                + '}';
+        return name + ": " + ", UnitPrice: " + unitPrice + ", nutritionalQuality=" + nutritionalQuality + ", producer: " + producer;
+    }
+
+    public String toStringOption2() {
+        StringBuilder resultString = new StringBuilder();
+
+        for (Producer producer : producerSet) {
+            resultString.append(producer);
+        }
+
+        return resultString.toString();
     }
 }
