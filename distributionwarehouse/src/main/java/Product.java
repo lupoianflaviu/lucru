@@ -51,7 +51,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return name + '\'' + ", unitPrice=" + unitPrice + ", nutritionalQuality=" + nutritionalQuality + ", producer=" + producer
-                + '}';
+        return name + ": " + ", UnitPrice: " + unitPrice + ", nutritionalQuality=" + nutritionalQuality + ", producer: " + producer;
     }
 }

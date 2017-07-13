@@ -46,6 +46,8 @@ public class Bag {
 
     @Override
     public String toString() {
-        return "Bag{" + "capacity=" + capacity + ", productsInBag=" + productsInBag + '}';
+        StringBuilder resultString = new StringBuilder();
+        resultString.append(productsInBag).append("");
+        return resultString.toString();
     }
 }
