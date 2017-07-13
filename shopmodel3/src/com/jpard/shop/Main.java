@@ -83,26 +83,22 @@ public class Main {
     private static void writeToFile(String fileName, Object object) {
         File file = new File(fileName);
 
-        try {
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file));
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
             oos.writeObject(object);
             oos.flush();
             oos.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("IOException: " + e.getMessage());
         }
-
     }
 
     private static void readFromFile(String fileName, Object object) {
-        try {
-            FileInputStream fis = new FileInputStream(fileName);
-            ObjectInputStream ois = new ObjectInputStream(fis);
+        try (FileInputStream fis = new FileInputStream(fileName); ObjectInputStream ois = new ObjectInputStream(fis)) {
 
             object = ois.readObject();
             System.out.println(object.toString());
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            System.err.println("IOException: " + e.getMessage());
         }
     }
 }
