@@ -21,6 +21,6 @@ public class Producer {
 
     @Override
     public String toString() {
-        return "Producer{" + "name='" + name + '\'' + '}';
+        return name + "; ";
     }
 }

@@ -46,7 +46,9 @@ public class Box {
 
     @Override
     public String toString() {
-        return "Box{" + "capacity=" + capacity + ", productsInBox=" + productsInBox + '}';
+        StringBuilder resultString = new StringBuilder();
+        resultString.append(productsInBox).append("");
+        return resultString.toString();
     }
 }
 

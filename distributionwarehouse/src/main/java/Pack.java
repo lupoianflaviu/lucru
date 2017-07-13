@@ -39,6 +39,13 @@ public class Pack {
     public void setProductsInPack(List<Product> productsInPack) {
         this.productsInPack = productsInPack;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder resultString = new StringBuilder();
+        resultString.append(productsInPack).append("");
+        return resultString.toString();
+    }
 }
 
 

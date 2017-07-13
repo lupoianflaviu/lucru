@@ -99,7 +99,9 @@ public class Vegetable implements Category {
 
     @Override
     public String toString() {
-        return "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\n\tbags: " + bags + "\n\tboxes: " + boxes
-                + "\n\tpacks: " + packs;
+        return "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\n\t" + bags + ", Total "
+                + calculateTotalBagsWeight() + " kg," + " Total Price: " + calculateTotalBagsPrice() + "\n\t" + boxes + ", Total "
+                + calculateTotalBoxesWeight() + " kg," + " Total Price: " + calculateTotalBoxesPrice() + "\n\t" + packs + ", Total "
+                + calculateTotalPacksWeight() + " kg," + " Total Price: " + calculateTotalPacksPrice();
     }
 }
