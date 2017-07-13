@@ -1,0 +1,91 @@
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by flaviu.lupoian on 13/07/2017.
+ */
+public class Fruit implements Category {
+    private List<Bag> bags = new ArrayList<>();
+    private List<Box> boxes = new ArrayList<>();
+    private List<Pack> packs = new ArrayList<>();
+
+    @Override
+    public void addBags(Bag bag) {
+        bags.add(bag);
+    }
+
+    @Override
+    public void addBoxes(Box box) {
+        boxes.add(box);
+    }
+
+    @Override
+    public void addPacks(Pack pack) {
+        packs.add(pack);
+    }
+
+    @Override
+    public int calculateTotalBagsWeight() {
+        int result = 0;
+
+        for (Bag bag : bags) {
+            result += bag.getCapacity();
+        }
+        return result;
+    }
+
+    @Override
+    public int calculateTotalBoxesWeight() {
+        int result = 0;
+
+        for (Box box : boxes) {
+            result += box.getCapacity();
+        }
+        return result;
+    }
+
+    @Override
+    public int calculateTotalPacksWeight() {
+        int result = 0;
+
+        for (Pack pack : packs) {
+            result += pack.getCapacity();
+        }
+        return result;
+    }
+
+    @Override
+    public int calculateTotalWeight() {
+        return calculateTotalBagsWeight() + calculateTotalBoxesWeight() + calculateTotalPacksWeight();
+    }
+
+    @Override
+    public Price calculateTotalBagsPrice() {
+        Price result = new Price(0);
+
+        for (Bag bag : bags) {
+            result.setValue(result.getValue() + bag.calculatePriceInABag().getValue());
+        }
+        return result;
+    }
+
+    @Override
+    public Price calculateTotalBoxesPrice() {
+        return null;
+    }
+
+    @Override
+    public Price calculateTotalPacksPrice() {
+        return null;
+    }
+
+    @Override
+    public Price calculateTotalPrice() {
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return  "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalBagsPrice().getValue() + "\nbags=" + bags + '}' + "\nboxes=" + boxes;
+    }
+}
