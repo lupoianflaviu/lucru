@@ -71,21 +71,31 @@ public class Fruit implements Category {
 
     @Override
     public Price calculateTotalBoxesPrice() {
-        return null;
+        Price result = new Price(0);
+
+        for (Box box : boxes) {
+            result.setValue(result.getValue() + box.calculatePriceInABox().getValue());
+        }
+        return result;
     }
 
     @Override
     public Price calculateTotalPacksPrice() {
-        return null;
+        Price result = new Price(0);
+
+        for (Pack pack : packs) {
+            result.setValue(result.getValue() + pack.calculatePriceInAPack().getValue());
+        }
+        return result;
     }
 
     @Override
     public Price calculateTotalPrice() {
-        return null;
+        return new Price(calculateTotalBagsPrice().getValue() + calculateTotalBoxesPrice().getValue() + calculateTotalPacksPrice().getValue());
     }
 
     @Override
     public String toString() {
-        return  "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalBagsPrice().getValue() + "\nbags=" + bags + '}' + "\nboxes=" + boxes;
+        return  "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\nbags=" + bags + '}' + "\nboxes=" + boxes;
     }
 }

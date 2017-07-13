@@ -15,7 +15,7 @@ public class Pack {
         this.capacity = capacity;
     }
 
-    public Price calculatePriceInABag() {
+    public Price calculatePriceInAPack() {
         Price result = new Price(0);
 
         for (Product product : productsInPack) {
