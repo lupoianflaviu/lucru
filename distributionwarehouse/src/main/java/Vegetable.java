@@ -98,6 +98,44 @@ public class Vegetable implements Category {
     }
 
     @Override
+    public int calculateBagsNutritional() {
+        int result = 0;
+
+        for (Bag bag : bags) {
+            result += bag.calculateNutritionalInABag();
+        }
+
+        return result;
+    }
+
+    @Override
+    public int calculateBoxesNutritional() {
+        int result = 0;
+
+        for (Box box : boxes) {
+            result += box.calculateNutritionalInABox();
+        }
+
+        return result;
+    }
+
+    @Override
+    public int calculatePacksNutritional() {
+        int result = 0;
+
+        for (Pack pack : packs) {
+            result += pack.calculateNutritionalInAPack();
+        }
+
+        return result;
+    }
+
+    @Override
+    public int calculateTotalNutritional() {
+        return calculateBagsNutritional() + calculateBoxesNutritional() + calculatePacksNutritional();
+    }
+
+    @Override
     public String toString() {
         return "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\n\t" + bags + ", Total "
                 + calculateTotalBagsWeight() + " kg," + " Total Price: " + calculateTotalBagsPrice() + "\n\t" + boxes + ", Total "
