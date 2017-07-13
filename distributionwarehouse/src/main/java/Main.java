@@ -31,6 +31,13 @@ public class Main {
         vegetable.addBags(onionBag);
         warehouse.addVegetables(vegetable);
 
+        //add otherProducts
+        Pack crackersPack = new Pack(100);
+        crackersPack.add(crackers);
+        OtherProduct otherProduct = new OtherProduct();
+        otherProduct.addPacks(crackersPack);
+        warehouse.addOtherProducts(otherProduct);
+
         System.out.println(warehouse.toString());
     }
 }

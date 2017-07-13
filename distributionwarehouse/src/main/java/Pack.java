@@ -15,6 +15,10 @@ public class Pack {
         this.capacity = capacity;
     }
 
+    public void add(Product product) {
+        productsInPack.add(product);
+    }
+
     public Price calculatePriceInAPack() {
         Price result = new Price(0);
 
