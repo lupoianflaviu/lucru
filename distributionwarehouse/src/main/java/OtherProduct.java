@@ -11,56 +11,92 @@ public class OtherProduct implements Category {
 
     @Override
     public void addBags(Bag bag) {
-
+        bags.add(bag);
     }
 
     @Override
     public void addBoxes(Box box) {
-
+        boxes.add(box);
     }
 
     @Override
     public void addPacks(Pack pack) {
-
+        packs.add(pack);
     }
 
     @Override
     public int calculateTotalBagsWeight() {
-        return 0;
+        int result = 0;
+
+        for (Bag bag : bags) {
+            result += bag.getCapacity();
+        }
+        return result;
     }
 
     @Override
     public int calculateTotalBoxesWeight() {
-        return 0;
+        int result = 0;
+
+        for (Box box : boxes) {
+            result += box.getCapacity();
+        }
+        return result;
     }
 
     @Override
     public int calculateTotalPacksWeight() {
-        return 0;
+        int result = 0;
+
+        for (Pack pack : packs) {
+            result += pack.getCapacity();
+        }
+        return result;
     }
 
     @Override
     public int calculateTotalWeight() {
-        return 0;
+        return calculateTotalBagsWeight() + calculateTotalBoxesWeight() + calculateTotalPacksWeight();
     }
 
     @Override
     public Price calculateTotalBagsPrice() {
-        return null;
+        Price result = new Price(0);
+
+        for (Bag bag : bags) {
+            result.setValue(result.getValue() + bag.calculatePriceInABag().getValue());
+        }
+        return result;
     }
 
     @Override
     public Price calculateTotalBoxesPrice() {
-        return null;
+        Price result = new Price(0);
+
+        for (Box box : boxes) {
+            result.setValue(result.getValue() + box.calculatePriceInABox().getValue());
+        }
+        return result;
     }
 
     @Override
     public Price calculateTotalPacksPrice() {
-        return null;
+        Price result = new Price(0);
+
+        for (Pack pack : packs) {
+            result.setValue(result.getValue() + pack.calculatePriceInAPack().getValue());
+        }
+        return result;
     }
 
     @Override
     public Price calculateTotalPrice() {
-        return null;
+        return new Price(calculateTotalBagsPrice().getValue() + calculateTotalBoxesPrice().getValue() + calculateTotalPacksPrice().getValue());
+    }
+
+    @Override
+    public String toString() {
+        return "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\nbags: " + bags + "\nboxes: " + boxes
+                + "\npacks: " + packs;
     }
 }

@@ -96,6 +96,7 @@ public class Fruit implements Category {
 
     @Override
     public String toString() {
-        return  "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\nbags=" + bags + '}' + "\nboxes=" + boxes;
+        return "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\nbags: " + bags + "\nboxes: " + boxes
+                + "\npacks: " + packs;
     }
 }
