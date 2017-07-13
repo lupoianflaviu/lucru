@@ -101,4 +101,14 @@ public class Fruit implements Category {
                 + calculateTotalBoxesWeight() + " kg," + " Total Price: " + calculateTotalBoxesPrice() + "\n\t" + packs + ", Total "
                 + calculateTotalPacksWeight() + " kg," + " Total Price: " + calculateTotalPacksPrice();
     }
+
+    public String toStringOptionTwo() {
+        StringBuilder result = new StringBuilder();
+
+        for (Bag bag : bags) {
+            result.append(bag);
+        }
+
+        return result.toString();
+    }
 }

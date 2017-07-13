@@ -17,7 +17,7 @@ public class Main {
         Fruit fruit = new Fruit();
         fruit.addBags(applesBag);
 
-        Box peachesBox = new Box(6);
+        Box peachesBox = new Box(30);
         peachesBox.add(peaches);
         fruit.addBoxes(peachesBox);
 
@@ -25,7 +25,7 @@ public class Main {
         warehouse.addFruits(fruit);
 
         //add vegetables
-        Bag onionBag = new Bag(4);
+        Bag onionBag = new Bag(15);
         onionBag.add(onions);
         Vegetable vegetable = new Vegetable();
         vegetable.addBags(onionBag);
@@ -39,5 +39,7 @@ public class Main {
         warehouse.addOtherProducts(otherProduct);
 
         System.out.println(warehouse.toString());
+        System.out.println("###################################");
+
     }
 }

@@ -12,7 +12,12 @@ public class Bag {
     }
 
     public Bag(int capacity) {
-        this.capacity = capacity;
+
+        if (capacity >=15 && capacity <=25) {
+            this.capacity = capacity;
+        } else {
+            throw new IllegalArgumentException(" Bag Capacity requirements not met.");
+        }
     }
 
     public void add(Product product) {
@@ -49,5 +54,13 @@ public class Bag {
         StringBuilder resultString = new StringBuilder();
         resultString.append(productsInBag).append("");
         return resultString.toString();
+    }
+
+    public String toStringOption2() {
+        StringBuilder result = new StringBuilder();
+        for (Product product : productsInBag) {
+            result.append(product);
+        }
+        return result.toString();
     }
 }

@@ -12,7 +12,11 @@ public class Pack {
     }
 
     public Pack(int capacity) {
-        this.capacity = capacity;
+        if (capacity >= 100 && capacity <= 500) {
+            this.capacity = capacity;
+        } else {
+            throw new IllegalArgumentException(" Pack Capacity requirements not met.");
+        }
     }
 
     public void add(Product product) {
