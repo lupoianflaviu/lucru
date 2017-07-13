@@ -25,14 +25,4 @@ public class Warehouse {
     public String toString() {
         return "Warehouse:" + "\nFruits: " + fruits + "\nVegetables: " + vegetables + "\notherProducts: " + otherProducts;
     }
-
-    public String toStringOption2() {
-        StringBuilder result = new StringBuilder();
-        result.append("Warehouse:");
-        for (Fruit fruit : fruits) {
-            result.append(fruit);
-        }
-
-        return result.toString();
-    }
 }
