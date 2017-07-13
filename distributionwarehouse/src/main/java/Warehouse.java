@@ -23,6 +23,6 @@ public class Warehouse {
 
     @Override
     public String toString() {
-        return "Warehouse:" + "\n" + "Fruits: " + fruits + ", vegetables=" + vegetables + ", otherProducts=" + otherProducts + '}';
+        return "Warehouse:" + "\nFruits: " + fruits + "\nVegetables: " + vegetables + "\notherProducts: " + otherProducts;
     }
 }

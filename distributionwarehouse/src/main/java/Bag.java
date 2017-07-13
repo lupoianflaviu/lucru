@@ -23,7 +23,7 @@ public class Bag {
         Price result = new Price(0);
 
         for (Product product : productsInBag) {
-            result.setValue(result.getValue() + product.getUnitPrice().getValue());
+            result.setValue(result.getValue() + product.getUnitPrice().getValue() * this.capacity);
         }
         return result;
     }

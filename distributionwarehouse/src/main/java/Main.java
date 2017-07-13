@@ -9,8 +9,9 @@ public class Main {
         Product peaches = new Product("Peaches", new Price(30), 250, new Producer("FreshFruits"));
         Product crackers = new Product("Crackers", new Price(2), 50, new Producer("Food SA"));
         Product potatoes = new Product("Potatoes", new Price(15), 200, new Producer("FreshVegetables"));
+        Product onions = new Product("Onions", new Price(2.5), 150, new Producer("CountryVegetables"));
 
-//        Package aPackage = new Package();
+        //add fruits
         Bag applesBag = new Bag(20);
         applesBag.add(apples);
         Fruit fruit = new Fruit();
@@ -22,6 +23,13 @@ public class Main {
 
         Warehouse warehouse = new Warehouse();
         warehouse.addFruits(fruit);
+
+        //add vegetables
+        Bag onionBag = new Bag(4);
+        onionBag.add(onions);
+        Vegetable vegetable = new Vegetable();
+        vegetable.addBags(onionBag);
+        warehouse.addVegetables(vegetable);
 
         System.out.println(warehouse.toString());
     }
