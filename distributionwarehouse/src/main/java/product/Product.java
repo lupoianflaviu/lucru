@@ -7,18 +7,14 @@ public class Product {
     private String name;
     private Price unitPrice;
     private int nutritionalQuality;
-    private Producer producer;
-    private Category category;
 
     public Product() {
     }
 
-    public Product(String name, Price unitPrice, int nutritionalQuality, Producer producer, Category category) {
+    public Product(String name, Price unitPrice, int nutritionalQuality) {
         this.name = name;
         this.unitPrice = unitPrice;
         this.nutritionalQuality = nutritionalQuality;
-        this.producer = producer;
-        this.category = category;
     }
 
 
@@ -46,19 +42,8 @@ public class Product {
         this.nutritionalQuality = nutritionalQuality;
     }
 
-    public Producer getProducer() {
-        return producer;
-    }
-
-    public void setProducer(Producer producer) {
-        this.producer = producer;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
+    @Override
+    public String toString() {
+        return "\n" + name + ", " + unitPrice + ", " + nutritionalQuality;
     }
 }
