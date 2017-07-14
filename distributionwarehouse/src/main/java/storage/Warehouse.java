@@ -3,11 +3,8 @@ package storage;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 import product.Category;
-import product.Producer;
 
 /**
  * Created by flaviu.lupoian on 14/07/2017.
@@ -63,6 +60,18 @@ public class Warehouse {
                 result += bag.getWeight();
             }
         }
+
+        for (Box box : boxes) {
+            if (box.getCategory().equals(Category.VEGETABLES)) {
+                result += box.getWeight();
+            }
+        }
+
+        for (Pack pack : packs) {
+            if (pack.getCategory().equals(Category.VEGETABLES)) {
+                result += pack.getWeight();
+            }
+        }
         return result;
     }
 
@@ -73,6 +82,18 @@ public class Warehouse {
 
             if (bag.getCategory().equals(Category.OTHER)) {
                 result += bag.getWeight();
+            }
+        }
+
+        for (Box box : boxes) {
+            if (box.getCategory().equals(Category.OTHER)) {
+                result += box.getWeight();
+            }
+        }
+
+        for (Pack pack : packs) {
+            if (pack.getCategory().equals(Category.OTHER)) {
+                result += pack.getWeight();
             }
         }
         return result;

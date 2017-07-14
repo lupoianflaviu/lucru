@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a56954-fa87-48c8-9451-72a73b29131c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/WarehouseDemo.java" afterPath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/WarehouseDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/product/Producer.java" afterPath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/product/Producer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/product/Product.java" afterPath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/product/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/storage/Bag.java" afterPath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/storage/Bag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/storage/Box.java" afterPath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/storage/Box.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/storage/Pack.java" afterPath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/storage/Pack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/storage/Warehouse.java" afterPath="$PROJECT_DIR$/../distributionwarehouse/src/main/java/storage/Warehouse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -539,7 +532,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
