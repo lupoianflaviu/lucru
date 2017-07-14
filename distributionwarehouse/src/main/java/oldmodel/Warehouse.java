@@ -1,3 +1,5 @@
+package oldmodel;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +25,6 @@ public class Warehouse {
 
     @Override
     public String toString() {
-        return "Warehouse:" + "\nFruits: " + fruits + "\nVegetables: " + vegetables + "\notherProducts: " + otherProducts;
+        return "oldmodel.Warehouse:" + "\nFruits: " + fruits + "\nVegetables: " + vegetables + "\notherProducts: " + otherProducts;
     }
 }

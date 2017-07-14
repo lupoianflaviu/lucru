@@ -1,10 +1,12 @@
+package oldmodel;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by flaviu.lupoian on 13/07/2017.
  */
-public class Fruit implements Category {
+public class Vegetable implements Category {
     private List<Bag> bags = new ArrayList<>();
     private List<Box> boxes = new ArrayList<>();
     private List<Pack> packs = new ArrayList<>();
@@ -26,6 +28,7 @@ public class Fruit implements Category {
 
     @Override
     public int calculateTotalBagsWeight() {
+
         int result = 0;
 
         for (Bag bag : bags) {
@@ -36,6 +39,7 @@ public class Fruit implements Category {
 
     @Override
     public int calculateTotalBoxesWeight() {
+
         int result = 0;
 
         for (Box box : boxes) {
@@ -46,6 +50,7 @@ public class Fruit implements Category {
 
     @Override
     public int calculateTotalPacksWeight() {
+
         int result = 0;
 
         for (Pack pack : packs) {
@@ -134,19 +139,9 @@ public class Fruit implements Category {
 
     @Override
     public String toString() {
-        return "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\n\t" + bags + ", Total "
-                + calculateTotalBagsWeight() + " kg," + " Total Price: " + calculateTotalBagsPrice() + "\n\t" + boxes + ", Total "
-                + calculateTotalBoxesWeight() + " kg," + " Total Price: " + calculateTotalBoxesPrice() + "\n\t" + packs + ", Total "
-                + calculateTotalPacksWeight() + " kg," + " Total Price: " + calculateTotalPacksPrice();
-    }
-
-    public String toStringOptionTwo() {
-        StringBuilder result = new StringBuilder();
-
-        for (Bag bag : bags) {
-            result.append(bag);
-        }
-
-        return result.toString();
+        return "Total: " + calculateTotalWeight() + "kg, " + "Total oldmodel.Price: " + calculateTotalPrice().getValue() + "\n\t" + bags + ", Total "
+                + calculateTotalBagsWeight() + " kg," + " Total oldmodel.Price: " + calculateTotalBagsPrice() + "\n\t" + boxes + ", Total "
+                + calculateTotalBoxesWeight() + " kg," + " Total oldmodel.Price: " + calculateTotalBoxesPrice() + "\n\t" + packs + ", Total "
+                + calculateTotalPacksWeight() + " kg," + " Total oldmodel.Price: " + calculateTotalPacksPrice();
     }
 }

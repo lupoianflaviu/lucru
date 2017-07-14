@@ -1,10 +1,12 @@
+package oldmodel;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by flaviu.lupoian on 13/07/2017.
  */
-public class OtherProduct implements Category {
+public class Fruit implements Category {
     private List<Bag> bags = new ArrayList<>();
     private List<Box> boxes = new ArrayList<>();
     private List<Pack> packs = new ArrayList<>();
@@ -134,9 +136,19 @@ public class OtherProduct implements Category {
 
     @Override
     public String toString() {
-        return "Total: " + calculateTotalWeight() + "kg, " + "Total Price: " + calculateTotalPrice().getValue() + "\n\t" + bags + ", Total "
-                + calculateTotalBagsWeight() + " kg," + " Total Price: " + calculateTotalBagsPrice() + "\n\t" + boxes + ", Total "
-                + calculateTotalBoxesWeight() + " kg," + " Total Price: " + calculateTotalBoxesPrice() + "\n\t" + packs + ", Total "
-                + calculateTotalPacksWeight() + " kg," + " Total Price: " + calculateTotalPacksPrice();
+        return "Total: " + calculateTotalWeight() + "kg, " + "Total oldmodel.Price: " + calculateTotalPrice().getValue() + "\n\t" + bags + ", Total "
+                + calculateTotalBagsWeight() + " kg," + " Total oldmodel.Price: " + calculateTotalBagsPrice() + "\n\t" + boxes + ", Total "
+                + calculateTotalBoxesWeight() + " kg," + " Total oldmodel.Price: " + calculateTotalBoxesPrice() + "\n\t" + packs + ", Total "
+                + calculateTotalPacksWeight() + " kg," + " Total oldmodel.Price: " + calculateTotalPacksPrice();
+    }
+
+    public String toStringOptionTwo() {
+        StringBuilder result = new StringBuilder();
+
+        for (Bag bag : bags) {
+            result.append(bag);
+        }
+
+        return result.toString();
     }
 }

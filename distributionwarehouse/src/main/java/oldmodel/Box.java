@@ -1,3 +1,5 @@
+package oldmodel;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class Box {
         if (capacity >= 30 && capacity <= 60) {
             this.capacity = capacity;
         } else {
-            throw new IllegalArgumentException(" Box Capacity requirements not met.");
+            throw new IllegalArgumentException(" oldmodel.Box Capacity requirements not met.");
         }
     }
 

@@ -1,3 +1,5 @@
+package oldmodel;
+
 /**
  * Created by flaviu.lupoian on 13/07/2017.
  */

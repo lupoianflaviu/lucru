@@ -1,3 +1,5 @@
+package oldmodel;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +18,7 @@ public class Bag {
         if (capacity >=15 && capacity <=25) {
             this.capacity = capacity;
         } else {
-            throw new IllegalArgumentException(" Bag Capacity requirements not met.");
+            throw new IllegalArgumentException(" oldmodel.Bag Capacity requirements not met.");
         }
     }
 

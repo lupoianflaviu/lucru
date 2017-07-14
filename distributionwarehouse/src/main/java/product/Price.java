@@ -1,5 +1,7 @@
+package product;
+
 /**
- * Created by flaviu.lupoian on 13/07/2017.
+ * Created by flaviu.lupoian on 14/07/2017.
  */
 public class Price {
     private double value;

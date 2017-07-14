@@ -1,3 +1,5 @@
+package oldmodel;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class Pack {
         if (capacity >= 100 && capacity <= 500) {
             this.capacity = capacity;
         } else {
-            throw new IllegalArgumentException(" Pack Capacity requirements not met.");
+            throw new IllegalArgumentException(" oldmodel.Pack Capacity requirements not met.");
         }
     }
 
