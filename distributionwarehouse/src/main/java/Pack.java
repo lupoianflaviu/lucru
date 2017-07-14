@@ -32,6 +32,15 @@ public class Pack {
         return result;
     }
 
+    public int calculateNutritionalInAPack() {
+        int result = 0;
+
+        for (Product product : productsInPack) {
+            result += product.getNutritionalQuality();
+        }
+        return result;
+    }
+
     public int getCapacity() {
         return capacity;
     }

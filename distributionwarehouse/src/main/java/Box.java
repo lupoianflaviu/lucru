@@ -32,6 +32,15 @@ public class Box {
         return result;
     }
 
+    public int calculateNutritionalInABox() {
+        int result = 0;
+
+        for (Product product : productsInBox) {
+            result += product.getNutritionalQuality();
+        }
+        return result;
+    }
+
     public int getCapacity() {
         return capacity;
     }

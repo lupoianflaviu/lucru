@@ -24,4 +24,12 @@ public interface Category {
     Price calculateTotalPacksPrice();
 
     Price calculateTotalPrice();
+
+    int calculateBagsNutritional();
+
+    int calculateBoxesNutritional();
+
+    int calculatePacksNutritional();
+
+    int calculateTotalNutritional();
 }

@@ -33,6 +33,15 @@ public class Bag {
         return result;
     }
 
+    public int calculateNutritionalInABag() {
+        int result = 0;
+
+        for (Product product : productsInBag) {
+            result += product.getNutritionalQuality();
+        }
+        return result;
+    }
+
     public int getCapacity() {
         return capacity;
     }
